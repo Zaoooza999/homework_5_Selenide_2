@@ -15,20 +15,18 @@ public class DragAndDropTests {
     }
 
     @Test
-    void DragAndDropTest1()
+    void dragAndDropTest1()
     {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().moveToElement($("#column-a")).clickAndHold().moveToElement($("#column-b")).release().perform();
         $("#column-a").shouldHave(text("B"));
-        sleep(5000);
     }
 
     @Test
-    void DragAndDropTest2()
+    void dragAndDropTest2()
     {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDrop(to("#column-b"));
         $("#column-a").shouldHave(text("B"));
-        sleep(5000);
     }
 }

@@ -15,7 +15,7 @@ public class PageLoadTest {
     }
 
     @Test
-    void PageLoadtest()
+    void pageLoadtest()
     {
         open("https://github.com/");
         $("[role=banner]").$(byText("Solutions")).hover();
